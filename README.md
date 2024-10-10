@@ -33,3 +33,7 @@ Acesso ao site BugBank para execução dos casos de teste. Será necessário cri
 
 **Vydiard (ou outra ferramenta de gravação de vídeo):**
 Ferramenta para gravação de vídeo, como Vydiard, para documentar os testes realizados ou gravar tutoriais que demonstram a execução dos cenários de teste. Essa gravação pode ser útil para compartilhar o processo de QA ou para análise futura.
+
+**Ferramentas de Dados Fictícios:**
+4Devs: Usado para gerar dados fictícios como CPF, nome, endereço e outros campos para simulação em cadastros. ( https://www.4devs.com.br/gerador_de_pessoas )
+
