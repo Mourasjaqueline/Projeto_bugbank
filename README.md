@@ -27,10 +27,9 @@ Testes realizados sem um roteiro específico para encontrar problemas inesperado
 
 **Navegador de Internet:**
 Google Chrome ou Microsoft Edge: Os testes serão realizados no BugBank, então é importante ter um navegador compatível com o site para assegurar a correta execução dos cenários.
-BugBank:
 
-Acesso ao site BugBank para execução dos casos de teste. Será necessário criar uma conta de teste para simular ações como cadastro e login.
-Vydiard (ou outra ferramenta de gravação de vídeo):
+**BugBank:**
+Acesso ao site BugBank para execução dos casos de teste. Será necessário criar uma conta de teste para simular ações como cadastro e login.( https://bugbank.netlify.app/# )
 
-**Ferramenta para gravação de vídeo,**
-Vydiard, para documentar os testes realizados ou gravar tutoriais que demonstram a execução dos cenários de teste. Essa gravação pode ser útil para compartilhar o processo de QA ou para análise futura.
+**Vydiard (ou outra ferramenta de gravação de vídeo):**
+Ferramenta para gravação de vídeo, como Vydiard, para documentar os testes realizados ou gravar tutoriais que demonstram a execução dos cenários de teste. Essa gravação pode ser útil para compartilhar o processo de QA ou para análise futura.
