@@ -11,16 +11,16 @@ Este projeto foi criado como uma vitrine para demonstrar minhas habilidades prá
 # Estrutura do Repositório
 Abaixo está a estrutura de diretórios usada neste repositório para manter todos os testes organizados:
 
-test-cases/: Diretório com os casos de teste manuais documentados.
+**test-cases/:** Diretório com os casos de teste manuais documentados.
 Contém detalhes de cada caso, incluindo pré-condições, passos para execução, dados de teste e resultados esperados.
 
-bugs/: Relatórios de bugs identificados durante os testes.
+**bugs/:** Relatórios de bugs identificados durante os testes.
 Cada bug é descrito com passos de reprodução, gravidade e evidências (screenshots ou vídeos).
 
-evidence/: Pasta com todas as evidências dos testes, como capturas de tela e vídeos.
+**evidence/:** Pasta com todas as evidências dos testes, como capturas de tela e vídeos.
 Estruturada para facilitar a identificação de evidências associadas a casos ou bugs.
 
-exploratory-tests/: Testes exploratórios feitos na aplicação.
+**exploratory-tests/:** Testes exploratórios feitos na aplicação.
 Testes realizados sem um roteiro específico para encontrar problemas inesperados.
 
 # Configurações e Ferramentas Necessárias
