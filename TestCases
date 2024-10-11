@@ -1,1 +1,84 @@
+# Cadastro
+
+Para o cadastro foi utilizando uma tabela de decisão para auxiliar a mapear os cenários possíveis de cadastrp no BugBank, considerando a combinação de diferentes condições e resultados esperados.
+  
+Condição                                   Ação                                                        Resultado Esperado
+E-mail preenchido                      Verificar se o e-mail é valido            
+E-mail vazio	                         Mostrar mensagem de erro	                                        "Por favor, informe seu e-mail."
+Nome preenchido	                       Verificar se o nome contém apenas caracteres válidos	             Nome válido: prosseguir com o cadastro.
+Nome vazio	                           Mostrar mensagem de erro	                                         "Por favor, informe seu nome."
+Senha vazia                            Mostrar mensagem de erro	                                        "Por favor, informe sua senha."
+Confirmação de senha preenchida        Verificar se a confirmação de senha corresponde à senha           Senhas correspondem: prosseguir com o cadastro.
+Confirmação de senha vazia	           Mostrar mensagem de erro                                       	"Por favor, confirme sua senha."
+Senhas não correspondem	               Mostrar mensagem de erro                                         "As senhas não correspondem."
+Criar conta com saldo ativado	         Verificar se há um valor informado                               Valor informado: criar conta com saldo.
+Criar conta com saldo desativado	     Prosseguir sem saldo                                            	Criar conta sem saldo.
+Todos os campos válidos                Clicar no botão "Cadastrar"	                                    Cadastro bem-sucedido e redirecionamento para a tela inicial.
+Cadastro com erro	                     Mostrar mensagem de erro geral	                                  "Ocorreu um erro ao cadastrar. Tente novamente."
+
+
+**Feature: Cadastro no BugBank**
+
+Scenario: Cadastro com dados válido
+  Given o usuário está na página de cadastro
+  When o usuário insere um e-mail válido no campo de e-mail
+  And preenche os demais campos corretamente
+  And clica no botão "Cadastrar"
+  Then o sistema deve permitir o cadastro com sucesso
+  And redirecionar o usuário para a página inicial
+
+Scenario: Cadastro sem informar o e-mail
+  Given o usuário está na página de cadastro
+  When o usuário deixa o campo de e-mail vazio
+  And preenche os demais campos corretamente
+  And clica no botão "Cadastrar"
+  Then o sistema deve exibir a mensagem "É campo obrigatório"
+
+
+Scenario: Cadastro sem informar o nome
+  Given o usuário está na página de cadastro
+  When o usuário deixa o campo de nome vazio
+  And preenche os demais campos corretamente
+  And clica no botão "Cadastrar"
+  Then o sistema deve exibir o modal com a mensagem "Nome não pode ser vazio"
+
+Scenario: Cadastro sem informar a senha
+  Given o usuário está na página de cadastro
+  When o usuário deixa o campo de senha vazio
+  And preenche os demais campos corretamente
+  And clica no botão "Cadastrar"
+  Then o sistema deve exibir a mensagem "É campo obrigatório"
+
+Scenario: Confirmação de senha incorreta
+  Given o usuário está na página de cadastro
+  When o usuário insere senhas diferentes nos campos de senha e confirmação de senha
+  And clica no botão "Cadastrar"
+ Then o sistema deve exibir o modal com a mensagem "As senhas não são iguais"
+
+Scenario: Cadastro sem preencher a confirmação de senha
+  Given o usuário acessa a página de cadastro
+  When preenche o campo "Nome" 
+  And preenche o campo "E-mail" com dados válidos
+  And preenche o campo "Senha" 
+  And não preenche o campo "Confirmação de senha"
+  And clica no botão "Cadastrar"
+  Then o sistema deve exibir a mensagem "Confirmar senha não pode ser vazio"
+
+
+Scenario: Cadastro com saldo inicial
+  Given o usuário está na página de cadastro
+  When o usuário ativa a opção "Criar conta com saldo"
+  And preenche todos os campos corretamente
+  And clica no botão "Cadastrar"
+  Then o sistema deve criar a conta com saldo inicial
+
+Scenario: Cadastro duplicado com o mesmo e-mail
+  Given o usuário já possui uma conta registrada com o e-mail "teste@exemplo.com"
+  When o usuário acessa a página de cadastro
+  And insere o e-mail "teste@exemplo.com"
+  And preenche os demais campos com dados válidos
+  And clica no botão "Cadastrar"
+  Then o sistema deve exibir a mensagem "Este e-mail já está em uso. Tente outro."
+
+
 
