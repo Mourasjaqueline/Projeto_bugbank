@@ -78,5 +78,11 @@ Scenario: Cadastro duplicado com o mesmo e-mail
   And clica no botão "Cadastrar"
   Then o sistema deve exibir a mensagem "Este e-mail já está em uso. Tente outro."
 
+Scenario: Usuário desiste do cadastro e clica no botão "Voltar ao login"
+  Given o usuário acessa a página de cadastro
+  When preenche alguns campos mas decide não prosseguir com o cadastro
+  And clica no botão "Voltar ao login"
+  Then o sistema deve redirecionar o usuário para a página de login
+  And a página de login deve ser exibida corretamente
 
 
