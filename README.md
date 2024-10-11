@@ -37,3 +37,5 @@ Ferramenta para gravação de vídeo, como Vydiard, para documentar os testes re
 **Ferramentas de Dados Fictícios:**
 4Devs: Usado para gerar dados fictícios como CPF, nome, endereço e outros campos para simulação em cadastros. ( https://www.4devs.com.br/gerador_de_pessoas )
 
+**Requisitos**
+https://bugbank.netlify.app/requirements
