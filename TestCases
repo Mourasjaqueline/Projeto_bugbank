@@ -34,7 +34,6 @@ Scenario: Cadastro sem informar o e-mail
   And clica no botão "Cadastrar"
   Then o sistema deve exibir a mensagem "É campo obrigatório"
 
-
 Scenario: Cadastro sem informar o nome
   Given o usuário está na página de cadastro
   When o usuário deixa o campo de nome vazio
@@ -63,7 +62,6 @@ Scenario: Cadastro sem preencher a confirmação de senha
   And não preenche o campo "Confirmação de senha"
   And clica no botão "Cadastrar"
   Then o sistema deve exibir a mensagem "Confirmar senha não pode ser vazio"
-
 
 Scenario: Cadastro com saldo inicial
   Given o usuário está na página de cadastro
