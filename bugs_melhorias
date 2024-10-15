@@ -1,3 +1,10 @@
-Todos os bugs identificados estão relacinados as issues em aberto no link abaixo
+Todos os bugs identificados durante a execução dos testes funcionais
 
-https://github.com/Mourasjaqueline/Projeto_bugbank/issues
+1- Mensagem de erro incorreta ao tentar cadastrar sem confirmação de senha
+Este bug foi registrado em [#1](https://github.com/Mourasjaqueline/Projeto_bugbank/issues/1)
+
+2- Campo "Nome" aceita caracteres numéricos
+Este bug foi registrado em [#2](https://github.com/Mourasjaqueline/Projeto_bugbank/issues/2)
+
+3-Bloquear permissão de novo cadastro com os mesmos dados
+Este bug foi registrado em [#3](https://github.com/Mourasjaqueline/Projeto_bugbank/issues/3)
