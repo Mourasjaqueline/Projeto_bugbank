@@ -1,23 +1,8 @@
 # Cadastro
 
 Para o cadastro foi utilizando uma tabela de decisão para auxiliar a mapear os cenários possíveis de cadastrp no BugBank, considerando a combinação de diferentes condições e resultados esperados.
-  
-Condição                                   Ação                                                        Resultado Esperado
-E-mail preenchido                      Verificar se o e-mail é valido            
-E-mail vazio	                         Mostrar mensagem de erro	                                        "Por favor, informe seu e-mail."
-Nome preenchido	                       Verificar se o nome contém apenas caracteres válidos	             Nome válido: prosseguir com o cadastro.
-Nome vazio	                           Mostrar mensagem de erro	                                         "Por favor, informe seu nome."
-Senha vazia                            Mostrar mensagem de erro	                                        "Por favor, informe sua senha."
-Confirmação de senha preenchida        Verificar se a confirmação de senha corresponde à senha           Senhas correspondem: prosseguir com o cadastro.
-Confirmação de senha vazia	           Mostrar mensagem de erro                                       	"Por favor, confirme sua senha."
-Senhas não correspondem	               Mostrar mensagem de erro                                         "As senhas não correspondem."
-Criar conta com saldo ativado	         Verificar se há um valor informado                               Valor informado: criar conta com saldo.
-Criar conta com saldo desativado	     Prosseguir sem saldo                                            	Criar conta sem saldo.
-Todos os campos válidos                Clicar no botão "Cadastrar"	                                    Cadastro bem-sucedido e redirecionamento para a tela inicial.
-Cadastro com erro	                     Mostrar mensagem de erro geral	                                  "Ocorreu um erro ao cadastrar. Tente novamente."
 
-
-**Feature: Cadastro no BugBank**
+#Feature: Cadastro
 
 Scenario: Cadastro com dados válido
   Given o usuário está na página de cadastro
@@ -87,7 +72,46 @@ Scenario: Usuário desiste do cadastro e clica no botão "Voltar ao login"
 
 
 
-#Login
+#Feature Login
 
+Scenario: Tentativa de login sem preencher e-mail e senha
+  Given o usuário está na tela de login
+  When ele não preenche o campo de e-mail
+  And ele não preenche o campo de senha
+  And clica no botão "Acessar"
+  Then o sistema deve exibir a mensagem "Usuário e senha precisam ser preenchidos"
 
+Scenario: Tentativa de login com e-mail válido e senha vazia
+  Given o usuário está na tela de login
+  And ele preenche o campo de e-mail com "test@exemplo.com"
+  When ele não preenche o campo de senha
+  And clica no botão "Acessar"
+  Then o sistema deve exibir a mensagem "Usuário e senha precisam ser preenchidos"
 
+Scenario: Tentativa de login com senha válida e e-mail vazio
+  Given o usuário está na tela de login
+  And ele preenche o campo de senha com "senha123"
+  When ele não preenche o campo de e-mail
+  And clica no botão "Acessar"
+  Then o sistema deve exibir a mensagem "Usuário e senha precisam ser preenchidos"
+
+Scenario: Tentativa de login com usuário não cadastrado
+  Given o usuário está na tela de login
+  And ele preenche o campo de e-mail com "naocadastrado@exemplo.com"
+  And preenche o campo de senha com "senha123"
+  When ele clica no botão "Acessar"
+  Then o sistema deve exibir a mensagem "Usuário inválido ou não cadastrado"
+
+Scenario: Login bem-sucedido com credenciais válidas
+  Given o usuário está na tela de login
+  And ele preenche o campo de e-mail com "valido@exemplo.com"
+  And preenche o campo de senha com "senha123"
+  When ele clica no botão "Acessar"
+  Then o sistema deve permitir o login
+  And o usuário é redirecionado para a tela inicial
+
+Scenario: Usuário clica no botão "Registrar-se" para acessar a tela de cadastro
+  Given o usuário está na tela de login
+  When ele clica no botão "Registrar-se"
+  Then o sistema deve redirecionar o usuário para a tela de cadastro
+ 
