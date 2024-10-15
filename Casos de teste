@@ -53,7 +53,7 @@ Scenario: Cadastro com saldo inicial
   And clica no botão "Cadastrar"
   Then o sistema deve criar a conta com saldo inicial
 
-Scenario: Cadastro duplicado com o mesmo e-mail
+Scenario: Cadastro duplicado com o mesmo e-mail - issue aberta [#3]
   Given o usuário já possui uma conta registrada com o e-mail "teste@exemplo.com"
   When o usuário acessa a página de cadastro
   And insere o e-mail "teste@exemplo.com"
