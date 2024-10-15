@@ -1,4 +1,4 @@
-# BugBank Testing Repository 🐞
+# BugBank Testing Repository 🐞 [Em desenvolvimento]
 
 Este projeto tem como objetivo assegurar a qualidade da aplicação BugBank ( https://bugbank.netlify.app/#) por meio de testes manuais abrangentes, bem documentados, e focados em casos funcionais.
 
@@ -15,13 +15,8 @@ Abaixo está a estrutura de diretórios usada neste repositório para manter tod
 Contém detalhes de cada caso, incluindo pré-condições, passos para execução, dados de teste e resultados esperados.
 
 **bugs/:** Relatórios de bugs identificados durante os testes.
-Cada bug é descrito com passos de reprodução, gravidade e evidências (screenshots ou vídeos).
+Cada bug é descrito com descrição, passos de reprodução, resultado obtido, resultado esperado e evidências (screenshots ou vídeos).
 
-**evidence/:** Pasta com todas as evidências dos testes, como capturas de tela e vídeos.
-Estruturada para facilitar a identificação de evidências associadas a casos ou bugs.
-
-**exploratory-tests/:** Testes exploratórios feitos na aplicação.
-Testes realizados sem um roteiro específico para encontrar problemas inesperados.
 
 # Configurações e Ferramentas Necessárias
 
