@@ -1,8 +1,6 @@
-# Cadastro
+#Feature: Cadastro
 
 Para o cadastro foi utilizando uma tabela de decisão para auxiliar a mapear os cenários possíveis de cadastrp no BugBank, considerando a combinação de diferentes condições e resultados esperados.
-
-#Feature: Cadastro
 
 Scenario: Cadastro com dados válido
   Given o usuário está na página de cadastro
