@@ -1,9 +1,9 @@
 # BugBank Testing Repository 🐞 [Em desenvolvimento]
 
-Este projeto tem como objetivo assegurar a qualidade da aplicação BugBank ( https://bugbank.netlify.app/#) por meio de testes manuais abrangentes, bem documentados, e focados em casos funcionais.
+Este projeto tem como objetivo assegurar a qualidade da aplicação BugBank ( https://bugbank.netlify.app/#) por meio de testes manuais abrangentes, bem documentados, e focados em casos funcionais para as funcionalidades de Cadastro e Login.
 
 # Descrição
-O BugBank é uma plataforma usada para fins educativos e para simulação de transações bancárias. Neste repositório, você encontrará diversos artefatos relacionados ao processo de testes manuais, como casos de teste, relatórios de bugs e evidências coletadas.
+O BugBank é uma plataforma usada para fins educativos e para simulação de transações bancárias. Neste repositório, você encontrará diversos artefatos relacionados ao processo de testes manuais, como casos de teste, relatórios de bugs e evidências coletadas referente as funcionalidades de cadastro e login.
 
 # 🎯 Motivação
 Este projeto foi criado como uma vitrine para demonstrar minhas habilidades práticas em Qualidade de Software. A motivação principal é expor o conhecimento adquirido ao longo dos últimos anos em testes manuais, mostrando a aplicação de técnicas como Análise de Valor Limite, Particionamento de Equivalência e Testes Exploratórios em um ambiente realista.
